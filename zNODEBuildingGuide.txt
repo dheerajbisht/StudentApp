@@ -1,0 +1,15 @@
+1 . while  seperating routes in different files remember.
+
+	1. always require model file before route.
+	2. the match-path in the route file should be the next path to the match-path we give in app.js for a router .
+	for e.g in app.js 
+		app.use('/StudentInfo/Register',studentInfoRoute,function(res,err){
+				if(err){
+					res.send('error occured');
+				}
+			}); 
+	then the path in studentInfoRoute file should be router.route('/')get(); if we write router.route('/StudentInfo/Register') it will give error.
+
+
+2. in syntax mongoose.model('STUDENT_INFO',StudentInfoSchema); remember first argument is the table name and case sensitive;
+	for example mongoose.model('table name' , schema name)

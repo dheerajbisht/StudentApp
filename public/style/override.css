@@ -1,0 +1,123 @@
+
+body {
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*background-color: #F3F3F4;*/
+	  background-color: #2F4050;
+    /*background-color: #1AB394;*/
+/*background-color : #023D69;*/  
+/*width: 100%;*/
+
+
+  font-size: 13px;
+  color: #676a6c;
+  padding: 0px;
+  
+  overflow-x: hidden;
+}
+.sideMenuLable {
+    color: 919CAD;
+    font-weight: 600;
+    
+}
+.mdiList{
+
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+#mdiDiv{
+
+	/*background-color: #2F4050;*/
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+#wrapper{
+
+
+/*	background-color: #2F4050;*/
+}
+.zero-padding{
+  padding-left:  0px;
+}
+
+#view-wrapper{
+
+	background-color: #F3F3F4;
+  padding:  0 px;
+}
+#navToggleBtn{
+
+  margin-bottom: 2px;
+
+}
+
+
+.viewContainerDiv{
+
+background-color: white;
+font-family: 'Montserrat', sans-serif;
+
+}
+
+.childDivGeneralised{
+
+  background-color: inherit;
+}
+
+@media (min-width: 768px){}
+	#view-wrapper{
+
+		min-height: 1200px;
+
+	}
+}
+
+@media (max-width: 768px) {
+  #view-wrapper {
+    position: inherit;
+    margin: 0 0 0 0px;
+    min-height: 1000px;
+
+  }
+
+
+li a:hover{
+
+  background-color: red;
+}
+
+
+
+.margin-div{
+
+  background-color: #F3F3F4;
+  height: 5px;
+
+}
+
+
+#header{
+    
+    float: left;
+    font-size: 24px!important;
+    line-height: 24px!important;
+    font-weight: normal!important;
+    padding: 0!important;
+    margin: 11px 0 0 15px!important;
+    letter-spacing: -1px;
+}
+
+
+a:after {
+    content: " -->";
+}
+
+#mdiNavbar{
+  padding-left : 1px;
+  padding-right : 0px;
+}
+.navbar-collapse{
+
+  padding-left: 0px;
+
+}
