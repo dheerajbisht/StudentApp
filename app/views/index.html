@@ -1,0 +1,133 @@
+<html>
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.2.0/metisMenu.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="lib/jquery.metisMenu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+
+
+    <script src="clientApp.js"></script>
+
+    <script src="controllers/StudentRegistration.Client.controller.js"></script>
+    <script src="controllers/MDITreeController.js"></script>
+    <script src="controllers/HomeController.js"></script>
+    <script src="directives/MDITreeDirective.js"></script>
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style/override.css" />
+
+    <script>
+    function dothis(){
+
+    $(' .navul .mdiList a ').click(function () {
+
+    $('.navul .mdiList a').each(function() {
+        $(this).removeClass('selected');
+    });
+
+    $(this).addClass('selected');
+    
+    console.log($(this).attr('id'));
+    
+    /*$.get($(this).attr('id'),function(data){
+        $('#result').html(data);
+    });*/
+    return false;
+});
+}
+
+
+    function doit() {
+
+
+    $('#side-menu').metisMenu({
+        toggle: false
+    });
+    dothis();
+    return true;
+
+}
+
+
+</script>
+</head>
+<body data-ng-app="StudentApp" onload="doit()">
+
+    <div id="wrapper">
+
+        
+
+        <div id="mdiDiv" class="col-sm-2 " ng-controller="MDITreeController">
+            
+            <!-- <div class="navbar">
+                <div class="navbar-header ">
+                <a type="button" class="btn-navbar" data-target="#mdiNavbar" data-toggle="collapse"> 
+                    <i class="fa fa-bars"></i>
+
+                </a>
+
+            </div>
+            </div> -->
+            
+            <div class = "navbar-header col-sm-12">
+                  <button id="navToggleBtn" type = "button" class = "navbar-toggle" 
+                     data-toggle = "collapse" data-target = "#mdiNavbar">
+                     <!-- <span class = "sr-only">Toggle navigation</span> -->
+                     <!-- <span class = "icon-bar"></span>
+                     <span class = "icon-bar"></span>
+                     <span class = "icon-bar"></span> -->
+                     <a class="btn btn-primary">
+                     <i style="color:blue;"class="fa fa-bars fa-6"></i> 
+                    </a>
+                  </button>
+                    
+      
+            </div>
+            
+            <nav id="mdiNavbar" class= "sidebar navbar-collapse collapse " style="padding-left:0px;"role="navigation">
+                
+            
+                <div class="nav in" id="side-menu">
+                    <tree family="family"></tree>
+                </div>
+            </nav>
+          
+        </div>
+
+        <div class="col-sm-10 zero-padding" id="view-wrapper">
+          
+          <div id ="viewContainerDiv1" class="viewContainerDiv">
+            <div class="visible-xs visible-sm  " style="height:10px ; background-color:F3F3F4"> </div>
+           <!--  <div class="col-md-12 childDivGeneralised" style=" min-height:50px;"> 
+            <!--     <span style="font-size:30px;">This is a Header</span> -->
+            <!-- </div> --> 
+            
+            <div ui-view ></div>
+          </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+</html>
